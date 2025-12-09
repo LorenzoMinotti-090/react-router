@@ -1,0 +1,22 @@
+
+body {
+  background-image: url("https://st4.depositphotos.com/3930503/20005/i/950/depositphotos_200052290-stock-photo-light-blue-gradient-background-blue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+} 
+
+.pricecard {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+.navbar-blur .nav-link.active {
+  color: whitesmoke;
+}
