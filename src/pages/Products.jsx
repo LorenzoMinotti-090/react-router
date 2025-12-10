@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -32,20 +33,25 @@ export default function Products() {
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {products.map((product) => (
           <div className="col" key={product.id}>
-            <div className="card h-100">
-              <img
-                src={product.image}
-                className="card-img-top p-3"
-                alt={product.title}
-                style={{ height: "220px", objectFit: "contain" }}
-              />
+            <Link
+              to={`/prodotti/${product.id}`}
+              className="text-decoration-none text-reset"
+            >
+              <div className="card h-100">
+                <img
+                  src={product.image}
+                  className="card-img-top p-3"
+                  alt={product.title}
+                  style={{ height: "220px", objectFit: "contain" }}
+                />
 
-              <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
-                <p className="text-truncate">{product.description}</p>
-                <p className="fw-bold">${product.price}</p>
+                <div className="card-body">
+                  <h5 className="card-title">{product.title}</h5>
+                  <p className="text-truncate">{product.description}</p>
+                  <p className="fw-bold">${product.price}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
